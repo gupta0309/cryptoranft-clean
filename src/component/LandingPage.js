@@ -2,7 +2,7 @@ import React, {useEffect} from "react";
 import useState from "react-usestateref";
 
 import {Button} from "@material-ui/core";
-import {Link,useNavigate} from "react-router-dom";
+import {Link,NavLink,useNavigate} from "react-router-dom";
 import Header from "../component/Header";
 import Countdown from "react-countdown";
 import Footer from "./Footer";
@@ -13,20 +13,25 @@ import { checkAuth } from "../service/axios";
 
 import group_1 from "../image/newimg/group-15627@2x.png"
 import grectangle_18 from "../image/newimg/rectangle-185@2x.png"
-import creator from "../image/newimg/creator.png"
-import fanse from "../image/newimg/fanse.png"
 import fluent_people from "../image/newimg/fluent_people-community-24-filled.png"
 import section_33 from "../image/newimg/section_33.png"
 import Star1 from "../image/newimg/Star1.png"
 import mask_group from "../image/newimg/mask-group@2x.png"
 import notethanungz from "../image/newimg/notethanungz-ovddpvd0unsplash-9@2x.png"
-import line_frame from "../image/newimg/line_frame.png"
+import line_frame from "../image/newimg/line1.png"
 import ic_baseline from "../image/newimg/ic_baseline-discord.png"
 import cib_telegram from "../image/newimg/cib_telegram-plane.png"
 import symbols_brightness from "../image/newimg/material-symbols_brightness-medium.png"
 import mdi_twitter from "../image/newimg/mdi_twitter.png"
  
-
+import landingBg from "../image/bg.jpg"; 
+import twosec from "../image/twosec1.jpg";
+import community from "../image/community.jpg";
+import creator from "../image/creater.jpg";
+import fanse from "../image/creater1.jpg";
+import vision from "../image/vision.jpg";
+import startted from "../image/startted.png";
+import roadmap from "../image/roadmap1.png";
 
 const Completionist = () => <span></span>;
 
@@ -80,7 +85,13 @@ function LandingPage() {
     <>
       <Header />
       <main className="pading-landin">
-        <section className="home_first_section">
+        <section className="home_first_section" style={{
+    backgroundImage: `url(${landingBg})`,
+    backgroundSize: "cover",       // ensures the image covers the entire section
+    backgroundPosition: "center",  // centers the image
+    backgroundRepeat: "no-repeat",
+    height: "100vh",               // makes the section take full viewport height
+  }}>
           <div className="container">
             <div className="row">
               <div className="col-lg-12">
@@ -90,7 +101,7 @@ function LandingPage() {
                   data-aos-duration="3000"
                 >
                   <h1>
-                  Discover, Collect, and Trade Exclusive NFTs<br></br> While Empowering Creative Communities.
+                  Discover, Collect, and Trade Exclusive NFTs<br></br> <span>While Empowering Creative Communities.</span>
                   </h1>
                   <p>
                    Connect with Artists, Collect Rare NFTs, and Showcase Your Digital World.
@@ -128,8 +139,9 @@ function LandingPage() {
             <div className="row mt-5">
               <div className="col-lg-3">
                 <img
-                  src={grectangle_18}
+                  src={twosec}
                   alt=""
+                  id="twosecimg"
                   className="h-100 "
                   data-aos="fade-up"
                   data-aos-duration="3000"
@@ -190,13 +202,12 @@ function LandingPage() {
                   data-aos-duration="3000"
                 >
                   <div className="first_child1">
-                    {/* <img
-                      src={
-                        fluent_people
-                      }
+                    <img
+                      src={community}
                       alt=""
                       className=""
-                    /> */}<i class="fa-regular fa-user"></i>
+                    />
+                    {/* <i className="fa-regular fa-user"></i> */}
                   </div>
                   <div className="title_for_what">
                     <h3>NFT Community</h3>
@@ -234,9 +245,9 @@ function LandingPage() {
                   data-aos-duration="3000"
                 >
                   <img
-                    src={section_33}
+                    src={vision}
                     alt=""
-                    className=""
+                    className="vision_img"
                   />
                 </div>
               </div>
@@ -247,46 +258,22 @@ function LandingPage() {
                   data-aos-duration="3000"
                 >
                   <p>
-                    Fantically is a platform designed for creators, fans and
-                    their communities. We believe build a future where creators
-                    can utilize Virtual Digital Assets(NFTs) to help them grow
-                    increating an equitable world that benefits creators and the
-                    fans equally.
-                    <br />
-                    Our vision is to build a future where creators can utilize
-                    NFTs to help them grow their communities. A future where
-                    fans can support their favorite creators and be a part of
-                    brands. NFTs are utility tokens that encapsulate creators,
-                    communities & brands. They provide a way for communities to
-                    be monetized and for fans to have an unparalleled
-                    experience.
+                   our vision is to create a vibrant digital ecosystem where creators, collectors, and communities thrive together. We aim to empower artists by giving them ownership of their work while providing fans with unique ways to engage, support, and discover digital assets. We believe NFTs are more than just collectibles—they are tools for creative expression, community building, and meaningful engagement. Our platform bridges the gap between creators and their audiences, making it easy to showcase talent, monetize creativity, and participate in an inclusive digital world.
                   </p>
                   <div className="our_focus">
                     <h4>Our Focus</h4>
                     <ul>
                       <li>
-                        <img
-                          src={Star1}
-                          alt=""
-                          className=""
-                        />
+                        <i class="fa-regular fa-star"></i>
                         NFT Creation{" "}
                       </li>
                       <li>
-                        <img
-                          src={Star1}
-                          alt=""
-                          className=""
-                        />
+                       <i class="fa-regular fa-star"></i>
                         Fan Engagement
                       </li>
                       <li>
-                        <img
-                          src={Star1}
-                          alt=""
-                          className=""
-                        />
-                        Community Building{" "}
+                       <i class="fa-regular fa-star"></i>
+                         Community Building{" "}
                       </li>
                     </ul>
                   </div>
@@ -314,11 +301,13 @@ function LandingPage() {
                   data-aos="fade-up"
                   data-aos-duration="3000"
                 >
+                  <Link to="/register">
                   <img
-                    src={mask_group}
+                    src={startted}
                     alt=""
                     className="filterimg_ssss"
                   />
+                  </Link>
                 </div>
               </div>
               <div className="col-lg-6">
@@ -381,10 +370,10 @@ function LandingPage() {
                 >
                   <img
                     src={
-                      notethanungz
+                      roadmap
                     }
                     alt=""
-                    className=""
+                    className="roadmap_img"
                   />
                 </div>
               </div>

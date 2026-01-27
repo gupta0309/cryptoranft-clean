@@ -4184,6 +4184,17 @@ img {
   border-radius: 10px;
   overflow: hidden;
 }
+.vision_img {
+  width: auto;
+  height: 320px;
+}
+li i{
+  color: #F2522E;
+}
+.roadmap_img{
+  width: 500px;
+  height: 450px;
+}
 .card-Trending p {
   display: flex;
   justify-content: space-between;
@@ -6538,7 +6549,9 @@ img.marehbivc {
     width: 100%;
   }
 
-
+.imag_colrr{
+  display: none;
+}
   .link_footer {
     align-items: center;
   }
@@ -7621,17 +7634,27 @@ button.header_btn_12:hover span {
 }
 .landing_content h1 {
   text-align: center;
-  font-weight: 600;
-  padding: 50px 0px;
-  font-size: 48px;
+  font-weight: 800;
+  padding: 70px 0px;
+  font-size: 52px;
   color: #F28705;
+  justify-content: center;
+  text-transform: uppercase;
 }
+
+.landing_content h1 span{
+    background: linear-gradient(90deg, #F28705, #FF6F61, #FFD700);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+}
+
 .home_first_section {
   padding: 50px 0px;
   background: #000;
 }
 .landing_content p {
-  font-size: 18px;
+  font-size: 24px;
   text-align: center;
   font-weight: 300;
   color: var(--text-gray);
@@ -7663,8 +7686,8 @@ button.header_btn_12:hover span {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #f9f9f9;
-  border: 1px solid #e0dffc;
+  background: linear-gradient(180deg, #fff 10%, #F28705 100%);
+  border: 2px solid #e0dffc;
   box-shadow: 0px 1px 4px rgb(0 0 0 / 20%);
   border-radius: 20px;
   padding: 15px 0px;
@@ -7674,10 +7697,10 @@ button.header_btn_12:hover span {
 }
 .first_child1 {
   padding: 0px 15px;
-  width: 14%;
+  /* width: 14%; */
 }
 .first_child1 img {
-  width: 63px;
+  width: 150px;
   margin: 0px auto;
   display: block;
 }
@@ -7716,8 +7739,8 @@ button.header_btn_12:hover span {
   border: 1px solid #5e57ff;
 }
 .clas_img_i {
-  height: 61px;
-  width: 18% !important;
+  height: 137px;
+  width: 110% !important;
 }
 .home_second_section {
   position: relative;
@@ -7940,6 +7963,9 @@ button.header_btn_12:hover span {
   .eheader_newwww {
     margin: 10px auto;
   }
+  #twosecimg{
+    display: none;
+  }
   .heade_btnt {
     display: flex;
     margin: 0 auto;
@@ -8054,6 +8080,12 @@ button.header_btn_12:hover span {
   }
 }
 @media (max-width: 599px) {
+  .imag_colrr{
+    display: none;
+  }
+  .roadmap_img{
+    display: none;
+  }
   .slidesection .slidesection {
     height: 782px;
   }
@@ -8087,7 +8119,7 @@ button.header_btn_12:hover span {
   .text_ovefr_wriye span {
     font-size: 25px;
     line-height: 32px;
-    left: 171px;
+    left: 0px;
     top: 50px;
   }
   .button_like_clss .texts_eee {
@@ -8130,6 +8162,7 @@ button.header_btn_12:hover span {
   .first_child1 {
     padding: 0px 15px;
     width: 20%;
+    display: none;
   }
   .title_for_what {
     width: 80%;
@@ -8157,8 +8190,12 @@ button.header_btn_12:hover span {
 }
 @media (max-width: 400px) {
   .landing_content h1 {
-    font-size: 35px;
+    font-size: 30px;
   }
+  .landing_content p{
+    font-size: 18px;
+  }
+
 }
 
 .nft_image {
@@ -8204,3 +8241,8 @@ button.header_btn_12:hover span {
     justify-content: flex-start;
   }
 }
+
+
+
+
+

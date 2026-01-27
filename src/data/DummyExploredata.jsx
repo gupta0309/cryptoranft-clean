@@ -1,34 +1,61 @@
-export const exploreDummyData = [
+import geomatry from "../image/newimg/geomatry.png";
+
+const exploreDummyData = [
   {
-    id: 1,
-    title: "Cyber Punk NFT",
-    image: "/images/nft1.png",
-    price: "0.25 ETH",
-    creator: "Alex",
-    likes: 120,
+    id: "exp1",
+    title: "Neon Geometry",
+    image: geomatry,
+    txHash: "0xAAA1",
+    chain: "Ethereum",
+
+    saleType: "auction", // "sale" | "auction"
+    price: "0.80",
+    currentBid: "0.45",
+
+    auctionEndsAt: Date.now() + 1000 * 60 * 60 * 24,
+
+    likesCount: 12,
+    creator: {
+      name: "GeoLab",
+      verified: true,
+    },
   },
   {
-    id: 2,
-    title: "Neon Monkey",
-    image: "/images/nft2.png",
-    price: "0.40 ETH",
-    creator: "John",
-    likes: 98,
+    id: "exp2",
+    title: "Cyber Grid",
+    image: geomatry,
+    txHash: "0xAAA2",
+    chain: "Polygon",
+
+    saleType: "sale",
+    price: "1.10",
+    currentBid: null,
+
+    likesCount: 5,
+    creator: {
+      name: "CyberWorks",
+      verified: true,
+    },
   },
   {
-    id: 3,
-    title: "Future Girl",
-    image: "/images/nft3.png",
-    price: "0.18 ETH",
-    creator: "Sarah",
-    likes: 210,
-  },
-  {
-    id: 4,
-    title: "Meta Skull",
-    image: "/images/nft4.png",
-    price: "0.60 ETH",
-    creator: "David",
-    likes: 320,
+    id: "exp3",
+    title: "Meta Pulse",
+    image: geomatry,
+    txHash: "0xAAA3",
+    chain: "Ethereum",
+
+    saleType: "auction",
+    price: null,
+    currentBid: "0.62",
+
+    auctionEndsAt: Date.now() + 1000 * 60 * 60 * 12,
+
+    likesCount: 0,
+    creator: {
+      name: "MetaForge",
+      verified: false,
+    },
   },
 ];
+
+export default exploreDummyData;

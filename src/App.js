@@ -168,8 +168,8 @@ function App() {
       <ToastContainer />
 
       <Routes>
-        <Route path="/" element={<LoginPage />} />
-        <Route path="/home" element={<Landing />} />
+        <Route path="/" element={<Landing />} />
+        <Route path="/" element={<Landing />} />
         <Route path="/register" element={<Register />} />
         <Route path="/loginPage" element={<LoginPage />} />
         <Route path="/forgetpass" element={<Forgetpass />} />

@@ -183,13 +183,13 @@ function Header(props) {
                   </li> */}
 
                   <li className="nav-item" role="presentation">
-                    <NavLink className="nav-link" to="/home">
+                    <NavLink className="nav-link" to="/">
                       HOME
                     </NavLink>
                   </li>
                   {authToken == false ? (
                     <li className="nav-item" role="presentation">
-                      <NavLink className="nav-link" to="/loginPage">
+                      <NavLink className="nav-link" to="/explore">
                         EXPLORE
                       </NavLink>
                     </li>
@@ -201,7 +201,7 @@ function Header(props) {
                     </li>
                   ) : (
                     <li className="nav-item" role="presentation">
-                      <NavLink className="nav-link" to="/walletConnect">
+                      <NavLink className="nav-link" to="/explore ">
                         EXPLORE
                       </NavLink>
                     </li>
@@ -219,7 +219,7 @@ function Header(props) {
 
                   {authToken == false ? (
                     <li className="nav-item" role="presentation">
-                      <NavLink className="nav-link" to="/loginPage">
+                      <NavLink className="nav-link" to="/collection">
                         Collection
                       </NavLink>
                     </li>
