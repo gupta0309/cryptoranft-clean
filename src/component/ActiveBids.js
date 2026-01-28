@@ -31,7 +31,7 @@
 // // import Pagination from "react-js-pagination";
 
 
-// // import geometryImage from "../image/newimg/geomatry.png";
+// // import "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS2d09rKGN6TOS6uuowoImBDKgAoKqf2b1Jug&s" from "../image/newimg/geomatry.png";
 // // import commentVerifyImg from "../image/newimg/uil_comment-verify.png";
 // // // import maticImage from "../image/newimg/matic.png";
 // // import maticImage from "../image/newimg/icon_1.png"
@@ -283,7 +283,7 @@
 // //                                                     <source src={item.cloudUrl} />
 // //                                                   </audio>
 // //                                                   <img
-// //                                                     src={geometryImage}
+// //                                                     src={"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS2d09rKGN6TOS6uuowoImBDKgAoKqf2b1Jug&s"}
 // //                                                     className=""
 // //                                                     alt="Geometry Illustration"
 // //                                                   />
@@ -1199,7 +1199,7 @@
 // import Header from "./Headerafterlogin";
 // import Listmenusec from "./Innernenu";
 
-// import geometryImage from "../image/newimg/geomatry.png";
+// import "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS2d09rKGN6TOS6uuowoImBDKgAoKqf2b1Jug&s" from "../image/newimg/geomatry.png";
 // import commentVerifyImg from "../image/newimg/uil_comment-verify.png";
 // import maticImage from "../image/newimg/icon_1.png";
 // import ethImage from "../image/newimg/eth.png";
@@ -1351,7 +1351,7 @@
 //                             <audio controls>
 //                               <source src={item.cloudUrl} />
 //                             </audio>
-//                             <img src={geometryImage} alt="" />
+//                             <img src={"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS2d09rKGN6TOS6uuowoImBDKgAoKqf2b1Jug&s"} alt="" />
 //                           </div>
 //                         )}
 
@@ -1465,7 +1465,7 @@ import Sidebar from "./Sidebar";
 import Header from "./Headerafterlogin";
 import Listmenusec from "./Innernenu";
 
-import geometryImage from "../image/newimg/geomatry.png";
+// import "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS2d09rKGN6TOS6uuowoImBDKgAoKqf2b1Jug&s" from "../image/newimg/geomatry.png";
 import commentVerifyImg from "../image/newimg/uil_comment-verify.png";
 import maticImage from "../image/newimg/icon_1.png";
 import ethImage from "../image/newimg/eth.png";
@@ -1507,7 +1507,7 @@ function ActiveBids() {
       {
         _id: "1",
         Name: "Neon Geometry",
-        cloudUrl: geometryImage,
+        cloudUrl:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS2d09rKGN6TOS6uuowoImBDKgAoKqf2b1Jug&s",
         txHash: "0x111",
         network: "Ethereum",
         onSale: 0,
@@ -1523,7 +1523,7 @@ function ActiveBids() {
       {
         _id: "2",
         Name: "Cyber Samurai",
-        cloudUrl: geometryImage,
+        cloudUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQCzYlyopGZm6_0gjdWAZjTqhK72BTuSTzRLQ&s",
         txHash: "0x222",
         network: "Polygon",
         onSale: 1,
@@ -1540,7 +1540,7 @@ function ActiveBids() {
       {
         _id: "3",
         Name: "Meta Skull X",
-        cloudUrl: geometryImage,
+        cloudUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS4XRDKLaLD7MIzsJ2ZxFdEjn2_u64BJ7FvXA&s",
         txHash: "0x333",
         network: "Ethereum",
         onSale: 0,
@@ -1556,7 +1556,7 @@ function ActiveBids() {
         {
         _id: "1",
         Name: "Neon Geometry",
-        cloudUrl: geometryImage,
+        cloudUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS2d09rKGN6TOS6uuowoImBDKgAoKqf2b1Jug&s",
         txHash: "0x111",
         network: "Ethereum",
         onSale: 0,
@@ -1572,7 +1572,7 @@ function ActiveBids() {
       {
         _id: "2",
         Name: "Cyber Samurai",
-        cloudUrl: geometryImage,
+        cloudUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQCzYlyopGZm6_0gjdWAZjTqhK72BTuSTzRLQ&s",
         txHash: "0x222",
         network: "Polygon",
         onSale: 1,
@@ -1589,7 +1589,7 @@ function ActiveBids() {
       {
         _id: "3",
         Name: "Meta Skull X",
-        cloudUrl: geometryImage,
+        cloudUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS4XRDKLaLD7MIzsJ2ZxFdEjn2_u64BJ7FvXA&s",
         txHash: "0x333",
         network: "Ethereum",
         onSale: 0,
@@ -1605,7 +1605,7 @@ function ActiveBids() {
         {
         _id: "1",
         Name: "Neon Geometry",
-        cloudUrl: geometryImage,
+        cloudUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS2d09rKGN6TOS6uuowoImBDKgAoKqf2b1Jug&s",
         txHash: "0x111",
         network: "Ethereum",
         onSale: 0,
@@ -1621,7 +1621,7 @@ function ActiveBids() {
       {
         _id: "2",
         Name: "Cyber Samurai",
-        cloudUrl: geometryImage,
+        cloudUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQCzYlyopGZm6_0gjdWAZjTqhK72BTuSTzRLQ&s",
         txHash: "0x222",
         network: "Polygon",
         onSale: 1,
@@ -1638,7 +1638,7 @@ function ActiveBids() {
       {
         _id: "3",
         Name: "Meta Skull X",
-        cloudUrl: geometryImage,
+        cloudUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS4XRDKLaLD7MIzsJ2ZxFdEjn2_u64BJ7FvXA&s",
         txHash: "0x333",
         network: "Ethereum",
         onSale: 0,
@@ -1654,7 +1654,7 @@ function ActiveBids() {
         {
         _id: "1",
         Name: "Neon Geometry",
-        cloudUrl: geometryImage,
+        cloudUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS2d09rKGN6TOS6uuowoImBDKgAoKqf2b1Jug&s",
         txHash: "0x111",
         network: "Ethereum",
         onSale: 0,
@@ -1670,7 +1670,7 @@ function ActiveBids() {
       {
         _id: "2",
         Name: "Cyber Samurai",
-        cloudUrl: geometryImage,
+        cloudUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQCzYlyopGZm6_0gjdWAZjTqhK72BTuSTzRLQ&s",
         txHash: "0x222",
         network: "Polygon",
         onSale: 1,
@@ -1687,7 +1687,7 @@ function ActiveBids() {
       {
         _id: "3",
         Name: "Meta Skull X",
-        cloudUrl: geometryImage,
+        cloudUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS4XRDKLaLD7MIzsJ2ZxFdEjn2_u64BJ7FvXA&s",
         txHash: "0x333",
         network: "Ethereum",
         onSale: 0,
