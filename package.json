@@ -2,7 +2,7 @@
   "name": "discountsale",
   "version": "0.1.0",
   "private": true,
-   "engines": {
+  "engines": {
     "node": "24.x"
   },
   "dependencies": {
@@ -17,7 +17,6 @@
     "ajv": "^6.12.6",
     "ajv-keywords": "^3.5.2",
     "aos": "^2.3.4",
-    "aws-sdk": "^2.1224.0",
     "axios": "^0.26.0",
     "bootstrap-icons": "^1.9.1",
     "chart.js": "^3.7.0",
