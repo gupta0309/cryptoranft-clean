@@ -469,7 +469,7 @@ function Header() {
                   
 
                   <li class="nav-item hideweb" role="presentation">
-                    <NavLink className="nav-link" to="https://cinestarnft.io/">
+                    <NavLink className="nav-link" to="/">
                       HOME
                     </NavLink>
                   </li>
