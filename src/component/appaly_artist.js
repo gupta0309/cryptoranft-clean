@@ -44,7 +44,7 @@ function Home() {
     const { name, value } = e.target;
     let formData = { ...formValue, ...{ [name]: value } }
     setFormValue(formData);
-    console.log("formData===",formData)
+    console.log("formData==",formData)
 }
 
   const initialFormValue = {
@@ -104,37 +104,6 @@ const [cloudprofile, setcloudProfile] = useState("");
 const [cloudproof, setcloudProof] = useState("");
 const [buttontext, setButton] = useState("Submit application");
 
-// const uploadImage = (val,name) => {
-//   console.log("image upload===",val);
-//   const formData = new FormData();
-//   formData.append("myImage", val);
-//   console.log(formData,'formDataformDataformData')
-  
-
-//   const config = {
-//     headers: {
-//       "content-type": "multipart/form-data",
-//     },
-//   };
-//   axios.post(api.baseURL+"/upload", formData, config)
-//   .then((res) => {
-//     console.log("image upres",res);
-//     setProfile(res.data);
-//     setProfileImage(res.data);
-//     formValue[name] = res.data;
-//     var splitImage = api.baseURL+"/"+res.data.split('public')[1];
-//     if(name=="proof")
-//     {
-//       setPreviewKYC(splitImage)
-//     }
-//     else
-//     {
-//       setPreview(splitImage);
-//     }
-    
-//     console.log(splitImage,'----splitImage-----splitImage-----splitImage');
-//   });
-// }
 
 const uploadImage = async (file,name) => {
   setFile(file);
@@ -165,7 +134,7 @@ const uploadImage = async (file,name) => {
 }
 
 const validate = async (values) => {
-  console.log("values validation===",values);
+  console.log("values validation==",values);
   const errors = {};
   if (values.bio  == "") {
     errors.bio = 'This field is requird!';

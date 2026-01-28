@@ -65,7 +65,7 @@ function Home() {
 
   useEffect(() => {
     var collectionID = window.location.href.split("/")[5];
-    console.log("collectionID===", collectionID);
+    console.log("collectionID==", collectionID);
     setcollection_id(collectionID);
     getProfile();
     getNFTS(collectionID, 1);
@@ -120,18 +120,7 @@ function Home() {
     toastAlert("success", "Address copied");
   };
 
-  // const formatDate = (dateval) => {
-  //   try {
-  //     var [dateValues, timeValues] = dateval.split(' ');
-  //     var [day, month, year] = dateValues.split('-');
-  //     var [hours, minutes, seconds] = timeValues.split(':');
-  //     var formatDate = new Date(+year, +month - 1, +day, +hours, +minutes, +seconds);
-  //     var time_converted = formatDate.getTime();
-  //     return +time_converted;
-  //   } catch (error) {
-  //     console.log("catch formatdate====",error);
-  //   }
-  // }
+
 
   const formatDate = (dateval) => {
     try {
@@ -147,7 +136,7 @@ function Home() {
   const favorite = async (nft_id, action) => {
     try {
       setFav_id(nft_id);
-      if (action == "add") {
+      if (action === "add") {
         setFav_status("active")
       }
       else {
@@ -191,7 +180,7 @@ function Home() {
                 </div>
 
                 <main className="main-secton-prifieme">
-                  {collection_inforef.current && collection_inforef.current != "" ? (
+                  {collection_inforef.current && collection_inforef.current !== "" ? (
                     <div className="collectilo_name">
                       {/* <img
                     src={
@@ -287,7 +276,7 @@ function Home() {
                                         <div className="positionreel">
 
                                           {" "}
-                                          {item.auction_type == "timed" && item.onAuction == 1 && formatDate(item.Bidenddate) >= new Date().getTime() ?
+                                          {item.auction_type === "timed" && item.onAuction === 1 && formatDate(item.Bidenddate) >= new Date().getTime() ?
                                             (
                                               <div className="countown">
                                                 <Countdown
@@ -305,13 +294,13 @@ function Home() {
                                           {/* <Link to={`/NFTDetails/${item.txHash}/${item.network}`} className="imgconyeea"> */}
                                           <a href={`/NFTDetails/${item.txHash}/${item.network}`} className="imgconyeea">
                                             {item &&
-                                              (filetype_nft == "png" || filetype_nft == "jpg" || filetype_nft == "gif" || filetype_nft == "svg" || filetype_nft == "webp" || filetype_nft == "jpeg") ? (
+                                              (filetype_nft === "png" || filetype_nft === "jpg" || filetype_nft === "gif" || filetype_nft === "svg" || filetype_nft === "webp" || filetype_nft === "jpeg") ? (
                                               <img
                                                 src={item.cloudUrl}
                                                 className=""
                                                 alt=""
                                               />
-                                            ) : filetype_nft == "mp3" || filetype_nft == "ogg" ? (
+                                            ) : filetype_nft === "mp3" || filetype_nft === "ogg" ? (
                                               <>
                                                 <div className="audio_player_new">
                                                   <audio width="100%" height="300" controls controlsList="nodownload">
@@ -325,7 +314,7 @@ function Home() {
 
                                               </>
 
-                                            ) : filetype_nft == "mp4" || filetype_nft == "webm" || filetype_nft == "wav" ? (
+                                            ) : filetype_nft === "mp4" || filetype_nft === "webm" || filetype_nft === "wav" ? (
                                               <video width="100%" height="200" controls controlsList="nodownload">
                                                 <source src={item.cloudUrl} />
                                               </video>

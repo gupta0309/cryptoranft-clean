@@ -127,7 +127,7 @@ const AdminRightsDistribution = () => {
 
   const removeRight = (index) => {
     setMovieRights((prev) => {
-      const updatedRights = prev.rights.filter((_, i) => i !== index)
+      const updatedRights = prev.rights.filter((_, i) => i  != index)
       return { ...prev, rights: updatedRights }
 
 
@@ -141,7 +141,7 @@ const AdminRightsDistribution = () => {
     setMovieRights((prev) => ({
       ...prev,
       rights: prev.rights.map((right, i) =>
-        i === index
+        i == index
           ? { ...right, sub_rights: [...right.sub_rights, newField] }
           : right
       ),
@@ -151,7 +151,7 @@ const AdminRightsDistribution = () => {
   const removeSubRight = (index, subIndex) => {
     setMovieRights((prev) => {
       const updatedRights = [...prev.rights];
-      updatedRights[index].sub_rights = updatedRights[index].sub_rights.filter((_, i) => i !== subIndex);
+      updatedRights[index].sub_rights = updatedRights[index].sub_rights.filter((_, i) => i  != subIndex);
       return { ...prev, rights: updatedRights };
     });
   }

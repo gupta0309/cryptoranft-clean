@@ -103,7 +103,7 @@ const AdminCreateCategory = () => {
     }
 
     const handleEdit = async (id) => {
-        const CategoryToEdit = list.find((item) => item._id === id);
+        const CategoryToEdit = list.find((item) => item._id  === id);
         
         if (CategoryToEdit) {
             setCategoryData({ category: CategoryToEdit.category, icon: CategoryToEdit.icon })

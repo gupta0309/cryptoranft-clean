@@ -7635,8 +7635,9 @@ button.header_btn_12:hover span {
 .landing_content h1 {
   text-align: center;
   font-weight: 800;
-  padding: 70px 0px;
-  font-size: 52px;
+  padding: 100px 0px;
+  padding-bottom: 50px;
+  font-size: 46px;
   color: #F28705;
   justify-content: center;
   text-transform: uppercase;
@@ -7686,7 +7687,8 @@ button.header_btn_12:hover span {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(180deg, #fff 10%, #F28705 100%);
+  /* background: linear-gradient(180deg, #fff 10%, #F28705 100%); */
+  background: linear-gradient(180deg, #f5b07e 10%, #bd6801 100%);
   border: 2px solid #e0dffc;
   box-shadow: 0px 1px 4px rgb(0 0 0 / 20%);
   border-radius: 20px;

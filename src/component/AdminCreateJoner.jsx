@@ -74,7 +74,7 @@ const AdminCreateJonerCatogeory = () => {
   };
 
   const handleEdit = (id) => {
-    const jonerToEdit = list.find((item) => item._id === id);
+    const jonerToEdit = list.find((item) => item._id  === id);
     if (jonerToEdit) {
       setJonerData({ joner: jonerToEdit.joner, icon: jonerToEdit.icon });
       setIsEditing(true);

@@ -103,7 +103,7 @@ const AdminCreateNFTCategory = () => {
     }
 
     const handleEdit = async (id) => {
-        const CategoryToEdit = list.find((item) => item._id === id);
+        const CategoryToEdit = list.find((item) => item._id  === id);
 
         if (CategoryToEdit) {
             setNFTCategoryData({ category: CategoryToEdit.category, icon: CategoryToEdit.icon })

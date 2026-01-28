@@ -158,7 +158,7 @@ function App() {
   useEffect(() => {
     // getProfile();
   }, [])
-  // const UserDatas.userRole ==="admin" = UserDatas.userRole === "admin";
+  // const UserDatas.userRole =="admin" = UserDatas.userRole == "admin";
 
 
   return (
@@ -262,7 +262,7 @@ function App() {
         <Route
           path="/dashboard"
           element={
-            UserDatas.userRole === "admin" ?
+            UserDatas.userRole == "admin" ?
               <Navigate to="/AdminDashboard" />
               :
               <RequireAuth>
@@ -276,7 +276,7 @@ function App() {
           element={
             <RequireAuth>
               {
-                UserDatas.userRole === "admin" ?<Navigate to="/AdminDashboard">: <Dashboard />
+                UserDatas.userRole == "admin" ?<Navigate to="/AdminDashboard">: <Dashboard />
               }
             </RequireAuth>
           }
@@ -368,7 +368,7 @@ function App() {
         {/* <Route
           path="/AdminCreateMovie"
           element={
-            // UserDatas.userRole === "user" ?
+            // UserDatas.userRole == "user" ?
             // <Navigate to="/dashboard" />
             //   : 
               <RequireAuth>
@@ -379,7 +379,7 @@ function App() {
         <Route
           path="/AdminUpdateMovie/:movieIdforUpdat"
           element={
-            // UserDatas.userRole === "user" ?
+            // UserDatas.userRole == "user" ?
             // <Navigate to="/dashboard" />
             //   : 
               <RequireAuth>
@@ -390,7 +390,7 @@ function App() {
 
         <Route path="/AdminCreateJoner"
           element={
-            // UserDatas.userRole === "user" ?
+            // UserDatas.userRole == "user" ?
             // <Navigate to="/dashboard" />
             //   : 
               <RequireAuth>
@@ -400,7 +400,7 @@ function App() {
         <Route
           path="/AdminCreateCategory"
           element={
-            // UserDatas.userRole === "user" ?
+            // UserDatas.userRole == "user" ?
             //     <Navigate to="/dashboard" />
             //   : 
               <RequireAuth>
@@ -410,7 +410,7 @@ function App() {
         />
         <Route path="/AdminMovieList"
           element={
-            // UserDatas.userRole === "user" ?
+            // UserDatas.userRole == "user" ?
             // <Navigate to="/dashboard" />
             //   : 
               <RequireAuth>
@@ -420,7 +420,7 @@ function App() {
         <Route
           path="/AdminCreateNFTCategory"
           element={
-            // UserDatas.userRole === "user" ?
+            // UserDatas.userRole == "user" ?
             // <Navigate to="/dashboard" />
             //   : 
               <RequireAuth>
@@ -431,7 +431,7 @@ function App() {
         {/* <Route
           path="/AdminCreateNFTCollection"
           element={
-            // UserDatas.userRole === "user" ?
+            // UserDatas.userRole == "user" ?
             //   <Navigate to="/dashboard" />
             //   : 
               <RequireAuth>
@@ -442,7 +442,7 @@ function App() {
         <Route
           path="/AdminDashboard"
           element={
-            // UserDatas.userRole === "user" ?
+            // UserDatas.userRole == "user" ?
             // <Navigate to="/dashboard" />
             //   : 
               <RequireAuth>
@@ -456,7 +456,7 @@ function App() {
         <Route
           path="/AdminRevenueAddFund"
           element={
-            // UserDatas.userRole === "user" ?
+            // UserDatas.userRole == "user" ?
             //   <Navigate to="/dashboard" />
             //   : 
               <RequireAuth>
@@ -468,7 +468,7 @@ function App() {
         <Route
           path="/adminusers"
           element={
-            // UserDatas.userRole === "user" ?
+            // UserDatas.userRole == "user" ?
             //   <Navigate to="/dashboard" />
             //   : 
               <RequireAuth>
@@ -480,7 +480,7 @@ function App() {
           path="/AdminRightsDistribution/:movieId/:movieName"
           // path="/AdminRightsDistribution"
           element={
-            // UserDatas.userRole === "user" ?
+            // UserDatas.userRole == "user" ?
             //   <Navigate to="/dashboard" />
             //   : 
               <RequireAuth>

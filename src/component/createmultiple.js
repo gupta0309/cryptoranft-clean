@@ -237,7 +237,7 @@ function Home(props) {
       .then((resp) => resp.json())
       .then((data) => {
         setcloudUrl(data.secure_url);
-        console.log("cloudinary result===", cloudUrl);
+        console.log("cloudinary result==", cloudUrl);
         if (nftType == "Image" || nftType=="Virtual worlds" || nftType=="Trading Cards" || nftType == "Gaming") {
           setCoverImage(data.secure_url);
           setCoverImages(data.secure_url);
@@ -267,7 +267,7 @@ function Home(props) {
         params: [{chainId: id}], // chainId must be in hexadecimal numbers
       })
       .then((res) => {
-        console.log("network change res===", res);
+        console.log("network change res==", res);
         alert("Network changed");
         // window.location.href = "/";
         setNetwork(network);
@@ -492,8 +492,8 @@ function Home(props) {
   };
 
   const createNewNft = async (assetHash, metaDataURI, contract_address) => {
-    console.log("crate new nf===",metaDataURI)
-    console.log("crate new nfn contract_address===",contract_address)
+    console.log("crate new nf==",metaDataURI)
+    console.log("crate new nfn contract_address==",contract_address)
     if (window.ethereum) {
       await window.ethereum.send("eth_requestAccounts");
       window.web3 = new Web3(window.ethereum);
@@ -542,7 +542,7 @@ function Home(props) {
   };
 
   const imageUpload = (val) => {
-    console.log("image upload===", val);
+    console.log("image upload==", val);
     var filetype = val.type;
     if(filetype == "image/jpeg" || filetype == "image/jpg" || filetype == "image/png")
     {

@@ -77,7 +77,7 @@ function LandingPage() {
         let resp = await postMethod(data);
         if (resp.status) {
           toastAlert("success", "Wallet connected successfully!");
-          if (UserDatas.userRole === "admin") {
+          if (UserDatas.userRole == "admin") {
             
             navigate("/AdminDashboard");
           }
@@ -197,22 +197,7 @@ function LandingPage() {
                       </h3> */}
                     </div>
                     <div className="w-100 text-center">
-                      {/* {UserDatas.userRole === "admin" ?
-                      
-                      <Link
-                        className="text-center w-100 text-secondary "
-                          to="/AdminDashboard"
-                      >
-                        Skip
-                        </Link>
-                        :
-                        <Link
-                          className="text-center w-100 text-secondary "
-                          to="/dashboard"
-                        >
-                          Skip
-                        </Link>
-                    } */}
+                    
                       <Link
                         className="text-center w-100 text-secondary "
                         to="/dashboard"

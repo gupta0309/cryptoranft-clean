@@ -27,7 +27,7 @@ import mdi_twitter from "../image/newimg/mdi_twitter.png"
 import landingBg from "../image/bg.jpg"; 
 import twosec from "../image/twosec1.jpg";
 import community from "../image/community.jpg";
-import creator from "../image/creater.jpg";
+import creator from "../image/creater11.jpg";
 import fanse from "../image/creater1.jpg";
 import vision from "../image/vision.jpg";
 import startted from "../image/startted.png";
@@ -101,14 +101,14 @@ function LandingPage() {
                   data-aos-duration="3000"
                 >
                   <h1>
-                  Discover, Collect, and Trade Exclusive NFTs<br></br> <span>While Empowering Creative Communities.</span>
+                  Discover, Collect, and Trade Exclusive NFTs <span>While Empowering Creative Communities.</span>
                   </h1>
                   <p>
                    Connect with Artists, Collect Rare NFTs, and Showcase Your Digital World.
                     <br />
                    Experience, Own, and Trade One-of-a-Kind Digital Art Collections Today.
                   </p>
-                  {authToken == false ? (
+                  {authToken === false ? (
                   <Button onClick={navPage}>Join us</Button>
                   ) : ("")}
                 </div>
@@ -166,7 +166,7 @@ function LandingPage() {
                      Empowering creators in Web 3.0 with ownership and monetization. Launch your NFTs on Cryptora to showcase digital art, music, or collectibles, and grow your audience while earning directly from your work.
                     </p>
                   </div>
-                  {authToken == false ? (
+                  {authToken === false ? (
                   <div className="button_sections">
                     <Button onClick={navPage}>Join Now</Button>
                   </div>
@@ -190,7 +190,7 @@ function LandingPage() {
                      Collect, support, and engage! Unlock exclusive NFTs, participate in fan challenges, and enjoy special rewards as you connect with your favorite creators in the Cryptora ecosystem.
                     </p>
                   </div>
-                  {authToken == false ? (
+                  {authToken === false ? (
                   <div className="button_sections">
                     <Button onClick={navPage}>Join Now</Button>
                   </div>
@@ -215,7 +215,7 @@ function LandingPage() {
                     Connect, share, and discover. Join a vibrant community where creators tell the stories behind their NFTs, fans engage meaningfully, and everyone grows together in the world of Web 3.0.
                     </p>
                   </div>
-                  {authToken == false ? (
+                  {authToken === false ? (
                   <div className="button_sections">
                     <Button onClick={navPage}>Join Now</Button>
                   </div>
@@ -341,7 +341,7 @@ function LandingPage() {
                       </p>
                     </li>
                   </ul>
-                  {authToken == false ? (
+                  {authToken === false ? (
                   <Button onClick={navPage}>Register Now</Button>
                   ) : ("")}
                 </div>
@@ -349,7 +349,7 @@ function LandingPage() {
             </div>
           </div>
         </section>
-        <section className="sectionne button_looffaaa bg_coloeee">
+        <section className="sectionnee button_looffaaa bg_coloeee">
           <div className="container">
             <div className="row">
               <div className="col-lg-12 mb-5">
@@ -424,7 +424,7 @@ function LandingPage() {
             </div>
           </div>
         </section>
-        <section className="sectionne">
+        <section className="sectionnee">
           <div className="container">
             <div className="row">
               <div className="col-lg-12 mb-5">

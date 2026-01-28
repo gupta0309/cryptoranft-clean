@@ -40,9 +40,9 @@ function LandingPage() {
     var userEmail = localStorage.getItem('Email');
     var userPhone = localStorage.getItem('Phone');
 
-    if (userType == "Email") {
+    if (userType === "Email") {
       var emailPhone = userEmail;
-    } else if (userType == "Phone") {
+    } else if (userType === "Phone") {
       var emailPhone = userPhone;
     }
     var obj = {
@@ -69,7 +69,7 @@ function LandingPage() {
   const resendOTP = async () => {
     var getType = localStorage.getItem('userType');
     console.log(getType, " getType -----")
-    if (getType == "Email") {
+    if (getType === "Email") {
       var obj = {
         type: "Email",
         email: localStorage.getItem('Email')
@@ -87,7 +87,7 @@ function LandingPage() {
         toastAlert("error", resp.Message);
       }
     }
-    if (getType == "Phone") {
+    if (getType === "Phone") {
       var obj = {
         type: "Phone",
         phoneNumber: localStorage.getItem('Phone')
@@ -147,7 +147,7 @@ function LandingPage() {
                     <div className="login_button_00">
                       
                       {
-                        disableButton == true ?
+                        disableButton === true ?
                           (
                             <Button className="signin-btn header_btn" >
                               Loading...

@@ -91,7 +91,7 @@ function Home(props) {
     useEffect(() => { 
 
       var tokenCheck = localStorage.getItem("wallet");
-      if(tokenCheck == null || tokenCheck == undefined){
+      if(tokenCheck === null || tokenCheck === undefined){
         setLoginCheck(false);
         toastAlert('error','Connect your wallet');
         navigate('/');
@@ -100,9 +100,9 @@ function Home(props) {
       }
 
       var currentnetwork = "";
-      if (localStorage.getItem("chainId") == 97) {
+      if (localStorage.getItem("chainId") === "97") {
         currentnetwork = "BNB";
-      } else if (localStorage.getItem("chainId") == 80001) {
+      } else if (localStorage.getItem("chainId") === "80001") {
         currentnetwork = "MATIC";
       }
       setNetwork(currentnetwork);
@@ -135,7 +135,7 @@ const network_options = [
 const defaultOption = options[3];
 
 const onSelect = async (option) => {
-  if(option.value == "Music"){
+  if(option.value === "Music"){
     setcoverImageCeck(true);
   }else{
     setcoverImageCeck(false);
@@ -147,7 +147,7 @@ const onSelect = async (option) => {
 }
 
 const onSelectnetwork = async (option) => {
-  if(option.value == networkcurrent){
+  if(option.value === networkcurrent){
     setNftnetwork(option.value)
   }else{
     Changenetwork(option.value)
@@ -158,7 +158,7 @@ const onSelectnetwork = async (option) => {
 
     setNftName(e);
     let checknfrname =   isEmpty(e);
-    setnftError(checknfrname == false ? true : false );
+    setnftError(checknfrname === false ? true : false );
 
 }
 
@@ -167,7 +167,7 @@ const nftPrices  =  (e) => {
 
   
   let checknftprice =   isEmpty(e);
-  setnftpriceError(checknftprice == false ? true : false );
+  setnftpriceError(checknftprice === false ? true : false );
 
 }
 
@@ -175,24 +175,24 @@ const Description  =  (e) => {
   setDescription(e);
 
   let descriptioncheck =   isEmpty(e);
-  setdescriptionError(descriptioncheck == false ? true : false );
+  setdescriptionError(descriptioncheck === false ? true : false );
 }
 
 const Royalty  =  (e) => {
   setRoyalty(e);
 
   let royaltycheck =   isEmpty(e);
-  setroyaltyError(royaltycheck == false ? true : false );
+  setroyaltyError(royaltycheck === false ? true : false );
 }
 
 const Changenetwork = async (network) => {
   var current_chain = await window.web3.eth.getChainId();
   const chainId = localStorage.getItem("chainId");
 
-  if(chainId == 97 || chainId == 80001)
+  if(chainId === "97" || chainId === "80001")
   {
   var id = "";
-  if (network == "BNB") {
+  if (network === "BNB") {
     id = "0x61";
   } else {
     id = "0x13881";
@@ -204,17 +204,17 @@ const Changenetwork = async (network) => {
     params: [{chainId: id}], // chainId must be in hexadecimal numbers
   })
   .then((res) => {
-    console.log("network change res===", res);
+    console.log("network change res==", res);
     alert("Network changed");
     // window.location.href = "/";
     setNetwork(network);
-    var chain_id = (network=="BNB")?97:80001;
+    var chain_id = (network==="BNB")?97:80001;
     console.log("chain network==",network);
     console.log("chain_id==",chain_id);
     localStorage.setItem("chainId",chain_id);
   })
   .catch((err) => {
-    if (err.code == 4902) {
+    if (err.code === 4902) {
       alert("Please add " + network + " to metamask");
     } else {
       alert("Something went wrong, please try again");
@@ -496,7 +496,7 @@ const upload_cloud = async (file) => {
   })
   .then(resp => resp.json())
   .then(data => {
-    console.log("cloudinary result===",cloudUrl);
+    console.log("cloudinary result==",cloudUrl);
     setcloudUrl(data.secure_url);
     if(nftType=="Image" || nftType=="Virtual worlds" || nftType=="Trading Cards" || nftType == "Gaming" )
     {

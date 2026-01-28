@@ -106,7 +106,7 @@ function Home() {
       },
     })
       .then((res) => {
-        console.log("user profile===", res.data);
+        console.log("user profile==", res.data);
         if (res.data == "some Error occurred") {
           localStorage.removeItem("wallet");
           localStorage.removeItem("profile_image");
@@ -301,7 +301,7 @@ function Home() {
                           <div className="row">
                             {ntfimage &&
                               ntfimage.map((item, i) => {
-                                return item && (item.NFTtype == "Image" || item.NFTtype == "Virtual worlds" || item.NFTtype == "Trading Cards" || item.NFTtype == "Gaming") ? (
+                                return item && (item.NFTtype === "Image" || item.NFTtype === "Virtual worlds" || item.NFTtype === "Trading Cards" || item.NFTtype === "Gaming") ? (
                                   <div className="col-lg-6">
                                     <div className="refernc_cad m-0">
                                       <div className="imge_with_1">
@@ -350,7 +350,7 @@ function Home() {
 
                             {ntfimage &&
                               ntfimage.map((item, i) => {
-                                return item && item.NFTtype == "Music" ? (
+                                return item && item.NFTtype === "Music" ? (
                                   <div className="col-lg-6">
                                     <div className="refernc_cad m-0">
                                       <div className="imge_with_1">
@@ -418,7 +418,7 @@ function Home() {
 
                             {ntfimage &&
                               ntfimage.map((item, i) => {
-                                return item && item.NFTtype == "Video" ? (
+                                return item && item.NFTtype === "Video" ? (
                                   <div className="col-lg-6">
                                     <div className="refernc_cad m-0">
                                       <div className="imge_with_1">
@@ -603,8 +603,8 @@ function Home() {
                             {ntfimage &&
                               ntfimage.map((item, i) => {
                                 return item &&
-                                  (item.NFTtype == "Image" || item.NFTtype == "Virtual worlds" || item.NFTtype == "Trading Cards" || item.NFTtype == "Gaming") &&
-                                  item.on_sale == true ? (
+                                  (item.NFTtype === "Image" || item.NFTtype === "Virtual worlds" || item.NFTtype === "Trading Cards" || item.NFTtype === "Gaming") &&
+                                  item.on_sale === true ? (
                                   <div className="col-lg-6">
                                     <div className="refernc_cad m-0">
                                       <div className="imge_with_1">
@@ -653,8 +653,8 @@ function Home() {
                             {ntfimage &&
                               ntfimage.map((item, i) => {
                                 return item &&
-                                  item.NFTtype == "Music" &&
-                                  item.on_sale == true ? (
+                                  item.NFTtype === "Music" &&
+                                  item.on_sale === true ? (
                                   <div className="col-lg-6">
                                     <div className="refernc_cad m-0">
                                       <div className="imge_with_1">
@@ -723,8 +723,8 @@ function Home() {
                             {ntfimage &&
                               ntfimage.map((item, i) => {
                                 return item &&
-                                  item.NFTtype == "Video" &&
-                                  item.on_sale == true ? (
+                                  item.NFTtype === "Video" &&
+                                  item.on_sale === true ? (
                                   <div className="col-lg-6">
                                     <div className="refernc_cad m-0">
                                       <div className="imge_with_1">
@@ -818,8 +818,8 @@ function Home() {
                             {ntfimage &&
                               ntfimage.map((item, i) => {
                                 return item &&
-                                  (item.NFTtype == "Image" || item.NFTtype == "Virtual worlds" || item.NFTtype == "Trading Cards" || item.NFTtype == "Gaming") &&
-                                  item.on_auction == true ? (
+                                  (item.NFTtype === "Image" || item.NFTtype === "Virtual worlds" || item.NFTtype === "Trading Cards" || item.NFTtype === "Gaming") &&
+                                  item.on_auction === true ? (
                                   <div className="col-lg-6">
                                     <div className="refernc_cad m-0">
                                       <div className="imge_with_1">
@@ -868,8 +868,8 @@ function Home() {
                             {ntfimage &&
                               ntfimage.map((item, i) => {
                                 return item &&
-                                  item.NFTtype == "Music" &&
-                                  item.on_auction == true ? (
+                                  item.NFTtype === "Music" &&
+                                  item.on_auction === true ? (
                                   <div className="col-lg-6">
                                     <div className="refernc_cad m-0">
                                       <div className="imge_with_1">
@@ -938,8 +938,8 @@ function Home() {
                             {ntfimage &&
                               ntfimage.map((item, i) => {
                                 return item &&
-                                  item.NFTtype == "Video" &&
-                                  item.on_auction == true ? (
+                                  item.NFTtype === "Video" &&
+                                  item.on_auction === true ? (
                                   <div className="col-lg-6">
                                     <div className="refernc_cad m-0">
                                       <div className="imge_with_1">
@@ -1077,14 +1077,14 @@ function Home() {
                                     "DD-MM-YYYY"
                                   );
                                   var filetype = '';
-                                  if (item.cloudUrl != "" && item.cloudUrl != undefined && item.cloudUrl) {
+                                  if (item.cloudUrl !== "" && item.cloudUrl !== undefined && item.cloudUrl) {
                                     filetype = get_url_extension(item.cloudUrl);
                                   }
                                   var activity_name = "";
-                                  if (item.activity_type == "token_buy") {
+                                  if (item.activity_type === "token_buy") {
                                     activity_name = "Buy Nft";
                                   }
-                                  else if (item.activity_type == "token_sale") {
+                                  else if (item.activity_type === "token_sale") {
                                     activity_name = "Sale Nft";
                                   }
                                   else {
@@ -1092,11 +1092,11 @@ function Home() {
                                   }
 
                                   console.log(filetype, "filetypefiletype");
-                                  return activity_name !== "kyc" ? (
+                                  return activity_name  !== "kyc" ? (
                                     <li className="single-tab-list d-flex align-items-center">
 
 
-                                      {item && item.cloudUrl && filetype !== "mp3" && filetype !== "mp4" && filetype !== "wav" && (
+                                      {item && item.cloudUrl && filetype  !== "mp3" && filetype  !== "mp4" && filetype  !== "wav" && (
                                         <a href="">
                                           <img
                                             src={item.cloudUrl}
@@ -1106,19 +1106,19 @@ function Home() {
                                         </a>
                                       )}
 
-                                      {item && item.cloudUrl && filetype == "mp3" && (
+                                      {item && item.cloudUrl && filetype === "mp3" && (
                                         <a href="">
                                           <img src={selectoption} className="avatar-lg" alt="" />
                                         </a>
                                       )}
 
-                                      {item && item.cloudUrl && filetype == "wav" && (
+                                      {item && item.cloudUrl && filetype === "wav" && (
                                         <a href="">
                                           <img src={selectoption} className="avatar-lg" alt="" />
                                         </a>
                                       )}
 
-                                      {item && item.cloudUrl && filetype == "mp4" && (
+                                      {item && item.cloudUrl && filetype === "mp4" && (
                                         <a href="">
                                           {/* <video
                                           width="80px"
@@ -1136,7 +1136,7 @@ function Home() {
                                         </a>
                                       )}
 
-                                      {item && filetype == "" && (
+                                      {item && filetype === "" && (
                                         <a href="">
                                           <img
                                             src={selectoption}

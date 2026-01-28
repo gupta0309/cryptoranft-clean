@@ -162,7 +162,7 @@ function Home() {
   ];
 
   const Discover = async (e) => {
-     console.log("setdiscover===",e.value)
+     console.log("setdiscover==",e.value)
      setdiscover(e.value);
   };
 

@@ -149,7 +149,7 @@ function Home() {
         .then((res) => {
           setLoading(false);
           let userData = res.data.topUsers;
-          console.log("userData===", userData);
+          console.log("userData==", userData);
           let sellerz = res.data.topUsers;
           let buyerz = res.data.topUsers;
 
@@ -214,7 +214,7 @@ function Home() {
       net = "BNB";
     }
     setNetwork(net);
-    //console.log("networkkkkk===",network)
+
     var tokenCheck = localStorage.getItem("wallet");
     if (tokenCheck == null || tokenCheck == undefined) {
       setLoginCheck(false);
